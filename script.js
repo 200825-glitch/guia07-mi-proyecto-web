@@ -10,3 +10,12 @@ document.getElementById("resultado").innerText =
 "Hola " + nombre + ", bienvenido al sistema.";
 }
 }
+
+function validarCorreo() {
+let correo = document.getElementById("correo").value;
+if (correo === "") {
+document.getElementById("mensajeCorreo").innerText = "Debe ingresar un correo.";
+} else {
+document.getElementById("mensajeCorreo").innerText = "Correo registrado correctamente.";
+}
+}
