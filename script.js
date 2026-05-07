@@ -50,3 +50,13 @@ document.getElementById("mensajeCorreo").innerText =
 }
 
 }
+
+function limpiarCampos() {
+
+document.getElementById("nombre").value = "";
+document.getElementById("correo").value = "";
+
+document.getElementById("resultado").innerText = "";
+document.getElementById("mensajeCorreo").innerText = "";
+
+}
