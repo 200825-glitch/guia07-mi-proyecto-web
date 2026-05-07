@@ -1,14 +1,24 @@
 function saludar() {
-// Obtener el valor del input
-let nombre = document.getElementById("nombre").value;
-// Validar si el usuario escribió algo
+
+let nombre = document.getElementById("nombre").value.trim();
+
 if (nombre === "") {
+
 document.getElementById("resultado").innerText =
-"Por favor, ingresa tu nombre.";
+"Por favor ingrese su nombre.";
+
+} else if (nombre.length < 3) {
+
+document.getElementById("resultado").innerText =
+"El nombre debe tener al menos 3 caracteres.";
+
 } else {
+
 document.getElementById("resultado").innerText =
 "Hola " + nombre + ", bienvenido al sistema.";
+
 }
+
 }
 
 function validarCorreo() {
