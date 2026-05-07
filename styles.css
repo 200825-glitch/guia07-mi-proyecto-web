@@ -1,23 +1,106 @@
 body {
-font-family: Arial, sans-serif;
-background-color: #f0f8ff;
-text-align: center;
-margin-top: 50px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #dfe9f3, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
+
+.container {
+    background: white;
+    width: 420px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: aparecer 0.8s ease;
+}
+
 h1 {
-color: #2c3e50;
+    color: #2c3e50;
+    margin-bottom: 10px;
 }
+
+h2 {
+    color: #34495e;
+    margin-top: 25px;
+}
+
+p {
+    color: #555;
+    font-size: 15px;
+}
+
 input {
-padding: 8px;
-margin: 10px;
+    width: 85%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    font-size: 14px;
 }
+
+input:focus {
+    border-color: #3498db;
+    box-shadow: 0px 0px 8px rgba(52, 152, 219, 0.5);
+}
+
 button {
-padding: 8px 15px;
-background-color: #3498db;
-color: white;
-border: none;
-cursor: pointer;
+    width: 90%;
+    padding: 12px;
+    margin-top: 10px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
+
 button:hover {
-background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 15px rgba(41, 128, 185, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#resultado,
+#mensajeCorreo {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Diseño responsive */
+@media (max-width: 500px) {
+
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input,
+    button {
+        width: 95%;
+    }
 }

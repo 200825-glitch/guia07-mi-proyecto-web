@@ -1,23 +1,61 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8" />
-<title>Mi Proyecto Web</title>
-<p>Este proyecto fue publicado usando GitHub.</p>
-<!-- Enlace al archivo CSS -->
-<link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mi Proyecto Web</title>
+
+    <!-- Enlace CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<h1>Bienvenido a mi Página Web</h1>
-<p>Ingrese su nombre:</p>
-<input type="text" id="nombre" placeholder="Escribe tu nombre" />
-<button onclick="saludar()">Saludar</button>
-<p id="resultado"></p>
-<!-- Enlace al archivo JavaScript -->
-<script src="script.js"></script>
-<h2>Formulario de contacto</h2>
-<input type="email" id="correo" placeholder="Ingrese su correo">
-<button onclick="validarCorreo()">Validar correo</button>
-<p id="mensajeCorreo"></p>
+
+    <div class="container">
+
+        <h1>Bienvenido a mi Página Web</h1>
+
+        <p>Este proyecto fue publicado usando GitHub.</p>
+
+        <h2>Saludo del sistema</h2>
+
+        <p>Ingrese su nombre:</p>
+
+        <input 
+            type="text" 
+            id="nombre" 
+            placeholder="Escribe tu nombre"
+        >
+
+        <button onclick="saludar()">
+            Saludar
+        </button>
+
+        <p id="resultado"></p>
+
+        <hr>
+
+        <h2>Formulario de contacto</h2>
+
+        <input 
+            type="email" 
+            id="correo" 
+            placeholder="Ingrese su correo"
+        >
+
+        <button onclick="validarCorreo()">
+            Validar correo
+        </button>
+
+        <p id="mensajeCorreo"></p>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
 </body>
+
 </html>

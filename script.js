@@ -2,6 +2,8 @@ function saludar() {
 
 let nombre = document.getElementById("nombre").value.trim();
 
+let soloLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+
 if (nombre === "") {
 
 document.getElementById("resultado").innerText =
@@ -11,6 +13,11 @@ document.getElementById("resultado").innerText =
 
 document.getElementById("resultado").innerText =
 "El nombre debe tener al menos 3 caracteres.";
+
+} else if (!soloLetras.test(nombre)) {
+
+document.getElementById("resultado").innerText =
+"El nombre no debe contener números ni caracteres especiales.";
 
 } else {
 
@@ -22,10 +29,24 @@ document.getElementById("resultado").innerText =
 }
 
 function validarCorreo() {
-let correo = document.getElementById("correo").value;
+
+let correo = document.getElementById("correo").value.trim();
+
 if (correo === "") {
-document.getElementById("mensajeCorreo").innerText = "Debe ingresar un correo.";
+
+document.getElementById("mensajeCorreo").innerText =
+"Debe ingresar un correo.";
+
+} else if (!correo.includes("@") || !correo.includes(".")) {
+
+document.getElementById("mensajeCorreo").innerText =
+"Correo inválido.";
+
 } else {
-document.getElementById("mensajeCorreo").innerText = "Correo registrado correctamente.";
+
+document.getElementById("mensajeCorreo").innerText =
+"Correo registrado correctamente.";
+
 }
+
 }
